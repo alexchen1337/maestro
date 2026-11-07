@@ -1,0 +1,9 @@
+name: maestro-ci-test
+on:
+  pull_request:
+    branches: [maestro-ci-base]
+jobs:
+  always-fails:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Throwaway check for Maestro's re-run test" && exit 1
